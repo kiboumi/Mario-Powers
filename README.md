@@ -30,7 +30,7 @@ Open your browser and navigate to http://localhost:1234 to experience the Mario 
 - GreenSock
 - Parcel.js (for module bundling)
 
-## Implementation Details
+<!-- ## Implementation Details
 
 ➡️Class-Based Population:
 
@@ -41,7 +41,7 @@ Open your browser and navigate to http://localhost:1234 to experience the Mario 
 - The Football_Team class represents a Premier League team and contains information about the team's name, image, and players.
 - The addPlayer method adds a player to the team's list of players.
 - The renderTeamPlayers method renders the team's information, including its name, image, and a list of players with their respective statistics.
-- The addToDropdown method adds the team's name to a dropdown menu for easy selection.
+- The addToDropdown method adds the team's name to a dropdown menu for easy selection. -->
 
 ## Developers
 
