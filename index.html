@@ -10,63 +10,16 @@
   </head>
 
   <body>
-    <div class="grid-con">
-      <h2 class="hidden">Mario Powers</h2>
-      <section id="mario-container" class="mario-container">
-        <h2>Choose the power:</h2>
-
-        <button id="normal-button" class="power-button">Normal</button>
-        <button id="flower-button" class="power-button">Flower</button>
-        <button id="star-button" class="power-button">Star</button>
-        <button id="mushroom-button" class="power-button">Mushroom</button>
-
-        <!-- <img
-          src="./images/normal_power_mushroom.png"
-          alt="normal_power_mushroom"
-        />
-        <img src="./images/acorn_power_squirel.png" alt="acorn_power_squirel" />
-        <img src="./images/cat_power_bell.png" alt="cat_power_bell" />
-        <img src="./images/egg_power_Yoshi.png" alt="egg_power_Yoshi" />
-        <img src="./images/raccoon_power_leaf.png" alt="raccoon_power_leaf" /> -->
-      </section>
-    </div>
+    <div class="container">
+      <h1>Select Your Character</h1>
+      <div class="buttons">
+          <a href="mario.html" class="character-button">Mario<img src="./images/mario-intro.png" alt="Normal"></a>
+          <a href="luigi.html" class="character-button">Luigi<img src="./images/luigi-intro.png" alt="Normal"></a>
+          <a href="peach.html" class="character-button">Peach<img src="./images/peach-intro.png" alt="Normal"></a>
+          <a href="toad.html" class="character-button">Toad<img src="./images/toad-intro.png" alt="Normal"></a>
+      </div>
+  </div>
   </body>
 </html>
 
-<!-- <div id="mario-container" class="mario-container"></div>
-<button id="normal-button" class="power-button">Normal</button>
-<button id="flower-button" class="power-button">Flower</button>
-<button id="star-button" class="power-button">Star</button>
-<button id="mushroom-button" class="power-button">Mushroom</button>
 
-<script>
-    class Mario {
-        constructor(images, containerSelector) {
-            this.images = images;
-            this.container = document.querySelector(containerSelector);
-        }
-
-        changePower(imageUrl) {
-            this.container.style.backgroundImage = `url(${imageUrl})`;
-        }
-    }
-
-    const marioImages = {
-        "normal": "mario_normal.png",
-        "flower": "mario_flower.png",
-        "star": "mario_star.png",
-        "mushroom": "mario_mushroom.png"
-    };
-
-    const mario = new Mario(marioImages, '.mario-container');
-
-    const buttons = document.querySelectorAll('.power-button');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const power = this.id.replace("-button", ""); // Extraer el poder del ID del botón
-            const imageUrl = marioImages[power];
-            mario.changePower(imageUrl);
-        });
-    });
-</script> -->
