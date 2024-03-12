@@ -2,15 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
-      rel="stylesheet"
-    />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <title>Mario Powers</title>
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script defer type="module" src="js/main.js"></script>
   </head>
+
+  <body>
+    <div class="grid-con">
+      <h2 class="hidden">Mario Powers</h2>
+      <section id="mario-container" class="mario-container">
+        <h2>Choose the power:</h2>
+
+        <button id="normal-button" class="power-button">Normal</button>
+        <button id="flower-button" class="power-button">Flower</button>
+        <button id="star-button" class="power-button">Star</button>
+        <button id="mushroom-button" class="power-button">Mushroom</button>
+
+        <!-- <img
+          src="./images/normal_power_mushroom.png"
+          alt="normal_power_mushroom"
+        />
+        <img src="./images/acorn_power_squirel.png" alt="acorn_power_squirel" />
+        <img src="./images/cat_power_bell.png" alt="cat_power_bell" />
+        <img src="./images/egg_power_Yoshi.png" alt="egg_power_Yoshi" />
+        <img src="./images/raccoon_power_leaf.png" alt="raccoon_power_leaf" /> -->
+      </section>
+    </div>
+  </body>
 </html>
+
+<!-- <div id="mario-container" class="mario-container"></div>
+<button id="normal-button" class="power-button">Normal</button>
+<button id="flower-button" class="power-button">Flower</button>
+<button id="star-button" class="power-button">Star</button>
+<button id="mushroom-button" class="power-button">Mushroom</button>
+
+<script>
+    class Mario {
+        constructor(images, containerSelector) {
+            this.images = images;
+            this.container = document.querySelector(containerSelector);
+        }
+
+        changePower(imageUrl) {
+            this.container.style.backgroundImage = `url(${imageUrl})`;
+        }
+    }
+
+    const marioImages = {
+        "normal": "mario_normal.png",
+        "flower": "mario_flower.png",
+        "star": "mario_star.png",
+        "mushroom": "mario_mushroom.png"
+    };
+
+    const mario = new Mario(marioImages, '.mario-container');
+
+    const buttons = document.querySelectorAll('.power-button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const power = this.id.replace("-button", ""); // Extraer el poder del ID del botón
+            const imageUrl = marioImages[power];
+            mario.changePower(imageUrl);
+        });
+    });
+</script> -->
