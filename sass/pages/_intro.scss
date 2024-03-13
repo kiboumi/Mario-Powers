@@ -1,0 +1,25 @@
+a {
+  cursor: pointer;
+}
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(/images/bg-main.png);
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+}
+
+.logo-name img {
+  size: 200px;
+  position: fixed;
+  padding: 20px;
+}

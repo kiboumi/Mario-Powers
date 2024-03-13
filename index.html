@@ -7,40 +7,52 @@
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <script defer type="module" src="js/main.js"></script>
+    <script
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
-
   <body>
-    <div class="grid-con">
-      <h2 class="hidden">Mario Powers</h2>
-      <section id="mario-container" class="col-start-1 col-end-4"></section>
-      <section class="span-full">
-        <li>
-          <ul>
-            <a id="normal-button" class="power-button">
-              <img src="./images/normal_power_mushroom.png" alt="Normal" />
-            </a>
-          </ul>
-          <ul>
-            <a id="acorn-button" class="power-button">
-              <img src="./images/acorn_power_squirel.png" alt="Normal" />
-            </a>
-          </ul>
-          <ul>
-            <a id="bell-button" class="power-button">
-              <img src="./images/cat_power_bell.png" alt="Normal" />
-            </a>
-          </ul>
-          <ul>
-            <a id="leaf-button" class="power-button">
-              <img src="./images/raccoon_power_leaf.png" alt="Normal" />
-            </a>
-          </ul>
-          <ul>
-            <a id="egg-button" class="power-button">
-              <img src="./images/egg_power_Yoshi.png" alt="Normal" />
-            </a>
-          </ul>
-        </li>
+    <div class="loading-page">
+      <img class="logo-name" src="images/logo.png" alt="mario-intro" />
+    </div>
+    <div class="">
+      <section class="grid-con">
+        <a class="m-col-start-1 m-col-end-4 mario-link">
+          <img
+            src="images/mario-intro.png"
+            alt="mario-intro"
+            class="character-img"
+            data-character="mario"
+          />
+        </a>
+        <a class="m-col-start-4 m-col-end-7 luigi-link">
+          <img
+            src="images/luigi-intro.png"
+            alt="luigi-intro"
+            class="character-img"
+            data-character="luigi"
+          />
+        </a>
+        <a class="m-col-start-7 m-col-end-10 peach-link">
+          <img
+            src="images/peach-intro.png"
+            alt="peach-intro"
+            class="character-img"
+            data-character="peach"
+          />
+        </a>
+        <a class="m-col-start-10 m-col-end-13 toad-link">
+          <img
+            src="images/toad-intro.png"
+            alt="toad-intro"
+            class="character-img"
+            data-character="toad"
+          />
+        </a>
       </section>
     </div>
   </body>
