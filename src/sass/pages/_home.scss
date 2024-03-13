@@ -1,12 +1,22 @@
+body {
+  background-image: url("/images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+  background-repeat: no-repeat;
+  background-color: aliceblue;
+}
+
 .content {
-    display: none;
-  }
+  display: none;
+}
 
- #web-dev{
+#web-dev {
   display: block;
- } 
+}
 
- #mario-container {
+#mario-container {
   width: 200px;
   height: 200px;
   background-size: contain;
@@ -36,4 +46,16 @@
 
 .power-button {
   margin-right: 10px; /* Ajusta el espacio entre los botones */
+}
+
+.character-info {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #098d00;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
 }

@@ -11,7 +11,7 @@ class Character {
 
   introduce() {
     let p = document.createElement("p");
-    p.textContent = `My name is ${this.name}, I am ${this.age} years old. `;
+    p.textContent = `My name is ${this.name}, I am ${this.age} years old.`;
     p.textContent += `I am ${this.height} tall with ${this.hairColor} hair and ${this.eyeColor} eyes. `;
     p.textContent += `I can run at ${this.maxSpeed} and my strength is ${this.strength}.`;
     p.classList.add("character-info");
@@ -20,56 +20,31 @@ class Character {
   }
 }
 
-class Power extends Character {
-  constructor(
-    name,
-    age,
-    height,
-    hairColor,
-    eyeColor,
-    maxSpeed,
-    strength,
-    power
-  ) {
-    super(name, age, height, hairColor, eyeColor, maxSpeed, strength);
-    this.power = power;
-  }
-  transform() {
-    let p = document.createElement("p");
-    let img = document.createElement("img");
-    img.src = `./images/${this.power}.png`;
-    p.textContent = `I am ${this.name} and I can transform into ${this.power}`;
-    p.classList.add("character-info");
-    document.body.appendChild(p);
-    document.body.appendChild(img);
-    p.innerHTML = p.textContent;
-  }
-}
-
-gsap.fromTo(
-  ".loading-page",
-  { opacity: 1 },
-  {
-    opacity: 0,
-    display: "none",
-    duration: 1.5,
-    delay: 3.5,
-  }
-);
-
-gsap.fromTo(
-  ".logo-name",
-  {
-    y: 50,
-    opacity: 0,
-  },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 2,
-    delay: 0.5,
-  }
-);
+// class Power extends Character {
+//   constructor(
+//     name,
+//     age,
+//     height,
+//     hairColor,
+//     eyeColor,
+//     maxSpeed,
+//     strength,
+//     power
+//   ) {
+//     super(name, age, height, hairColor, eyeColor, maxSpeed, strength);
+//     this.power = power;
+//   }
+//   transform() {
+//     let p = document.createElement("p");
+//     let img = document.createElement("img");
+//     img.src = `./images/${this.power}.png`;
+//     p.textContent = `I am ${this.name} and I can transform into ${this.power}`;
+//     p.classList.add("character-info");
+//     document.body.appendChild(p);
+//     document.body.appendChild(img);
+//     p.innerHTML = p.textContent;
+//   }
+// }
 
 // class Food extends Character {
 //     constructor(
