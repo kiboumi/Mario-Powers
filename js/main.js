@@ -1,39 +1,65 @@
-class Mario {
-  constructor(images, containerSelector) {
-    this.images = images;
-    this.container = document.querySelector(containerSelector);
-  }
+import Character from "./character.js";
 
-  changePower(imageUrl) {
-    // Clear existing content
-    this.container.innerHTML = "";
+const mario = new Character(
+  "Mario",
+  "27",
+  "160cm",
+  "Brown",
+  "Blue",
+  "20mph",
+  "100%",
+  "Pizza"
+);
+const luigi = new Character(
+  "Luigi",
+  "27",
+  "177cm",
+  "Brown",
+  "Blue",
+  "20mph",
+  "98%",
+  "Pasta"
+);
+const peach = new Character(
+  "Princess Peach",
+  "32",
+  "170cm",
+  "Brown",
+  "Blue",
+  "20mph",
+  "90%",
+  "Salad"
+);
+const toad = new Character(
+  "Toad",
+  "32",
+  "159cm",
+  "Brown",
+  "Blue",
+  "20mph",
+  "70%",
+  "Mushrooms"
+);
 
-    // Create new image element
-    const img = document.createElement("img");
-    img.src = imageUrl;
-    img.alt = "Mario Power";
-
-    // Append image to container
-    this.container.appendChild(img);
-  }
-}
-
-const marioImages = {
-  normal: "./images/mario-normal.png",
-  acorn: "./images/mario-squirel.png",
-  bell: "./images/mario-cat.png",
-  leaf: "./images/mario-raccoon.png",
-  egg: "./images/mario-yoshi.png",
-};
-
-const mario = new Mario(marioImages, "#mario-container");
-
-const buttons = document.querySelectorAll(".power-button");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const power = this.id.replace("-button", ""); // Extract power from button ID
-    const imageUrl = marioImages[power];
-    mario.changePower(imageUrl);
+document.querySelectorAll(".character-img").forEach((img) => {
+  img.addEventListener("click", function () {
+    clearCharacterInfo();
+    const characterName = this.dataset.character;
+    const character = {
+      mario,
+      luigi,
+      peach,
+      toad,
+    }[characterName];
+    if (character) {
+      character.introduce().eat();
+    }
   });
 });
+
+function clearCharacterInfo() {
+  const existingCharacterInfo = document.querySelector(".character-info");
+  if (existingCharacterInfo) {
+    existingCharacterInfo.remove();
+  }
+}
