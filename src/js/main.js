@@ -1,4 +1,5 @@
-import Character from "./character.js";
+import Character from "./modules/character.js";
+import gsapAnimation from "./modules/gsapAnimation.js";
 
 const mario = new Character(
   "Mario",
@@ -7,8 +8,8 @@ const mario = new Character(
   "Brown",
   "Blue",
   "20mph",
-  "100%",
-  "Pizza"
+  "100%"
+  // "Pizza"
 );
 const luigi = new Character(
   "Luigi",
@@ -17,8 +18,8 @@ const luigi = new Character(
   "Brown",
   "Blue",
   "20mph",
-  "98%",
-  "Pasta"
+  "98%"
+  // "Pasta"
 );
 const peach = new Character(
   "Princess Peach",
@@ -27,18 +28,18 @@ const peach = new Character(
   "Brown",
   "Blue",
   "20mph",
-  "90%",
-  "Salad"
+  "90%"
+  // "Salad"
 );
 const toad = new Character(
   "Toad",
   "32",
   "159cm",
   "Brown",
-  "Blue",
+  "Black",
   "20mph",
-  "70%",
-  "Mushrooms"
+  "70%"
+  // "Mushrooms"
 );
 
 document.querySelectorAll(".character-img").forEach((img) => {
@@ -52,7 +53,7 @@ document.querySelectorAll(".character-img").forEach((img) => {
       toad,
     }[characterName];
     if (character) {
-      character.introduce().eat();
+      character.introduce();
     }
   });
 });
