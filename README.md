@@ -20,15 +20,6 @@ To run this project locally, follow these steps:
 
 Open your browser and navigate to http://localhost:1234 to experience the Mario Bros RPG game.
 
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-- Sass
-- GreenSock
-- Parcel.js (for module bundling)
-
 ## Developers
 
 Estefania Aguilar -
